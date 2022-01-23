@@ -87,7 +87,7 @@ function setBackground(hour) {
             if (tableRow.id < workDayStart || tableRow.id >= workDayEnd) {
                 tableRow.children[1].className = 'event';
                 }
-            if (tableRow.id < hour && tableRow.id >= workDayStart) {
+            if (tableRow.id < hour && tableRow.id >= workDayStart && tableRow.id < workDayEnd) {
                 tableRow.children[1].className = 'event past';
                 }
             if (tableRow.id == hour) {
