@@ -111,7 +111,7 @@ let $saveCell = $('.save');
 $saveCell.on('click', function(event) {
     eventId = event.currentTarget.parentElement.parentElement.children[1].id;
     eventText = event.currentTarget.parentElement.parentElement.children[1].textContent;
-    console.log (event);
+    // console.log (event);
     if (!eventText) {
         alert('There is nothing to save. Please enter an event into the planner');
         return;

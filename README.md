@@ -26,6 +26,7 @@ Here is a screenshot of my finished page. Some key details and learnings are bel
 - Allowing the user to define their own "work day" with a minimum 4 hours span was an interesting way to add context to the planner as only "working hours" are color styled. Some nested conditional statements were required to handle the various time and hour combinations relative to the styling
 - In order to retain events saved across multiple dates and times I needed to use a short form of the date and time to create a unique keyname for local storage. This could possibly have been saved within an array of objects rather than as unique key names per event. JSON.stringify and JSON.parse would have been helpful in this case
 - It was a fun challenge to try to incorporate all this functionality without reloading the page
+- Needed to debug an error with event delegation on the save function and adjust the jQuery function to traverse the DOM in a way that worked regardless of the element clicked
 
 
 ## Future Enhancements
