@@ -109,6 +109,7 @@ function setBackground(hour) {
 let $saveCell = $('.save');
 
 $saveCell.on('click', function(event) {
+    eventId = event.originalEvent.path[3].children[1].id;
     eventText = event.originalEvent.path[3].children[1].textContent;
     console.log (event);
     if (!eventText) {
@@ -116,7 +117,12 @@ $saveCell.on('click', function(event) {
         return;
     } 
     // save to local storage
-    localStorage.setItem(event.originalEvent.path[3].children[1].id, event.originalEvent.path[3].children[1].textContent);
+    localStorage.setItem(eventId, eventText);
+    // double check the save
+    if (!localStorage.getItem(eventId)) {
+        console.log('needed to resave');
+        localStorage.setItem(eventId, eventText);
+    }
 });
 
 // functions that run on window load to setup the planner
