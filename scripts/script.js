@@ -48,13 +48,11 @@ function decDay (){
 document.getElementById('nextDay').addEventListener('click', function(event){
     event.preventDefault();
     incDay();
-    console.log(dayModifier);
 });
 
 document.getElementById('prevDay').addEventListener('click', function(event){
     event.preventDefault();
     decDay();
-    console.log(dayModifier);
 });
 
 
@@ -112,6 +110,7 @@ let $saveCell = $('.save');
 
 $saveCell.on('click', function(event) {
     eventText = event.originalEvent.path[3].children[1].textContent;
+    console.log (event);
     if (!eventText) {
         alert('There is nothing to save. Please enter an event into the planner');
         return;
