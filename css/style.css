@@ -1,0 +1,168 @@
+:root {
+    --past: green;
+    --present: yellow;
+    --future: lightgreen;
+    --tableBorder: black;  
+    --offwhite: whitesmoke;  
+    --button: #1C2833;
+    --submit: lightblue;
+}
+
+header {
+    padding: 4rem 2rem;
+    background-color: var(--offwhite);
+    border-bottom: solid 2px lightgray;
+}
+
+h1 {
+    font-size: 250%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h2 {
+    font-size: 150%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.date-div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.change-date {
+    font-size: 150%;
+    padding: 2px 5px;
+    margin: 0 1rem;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: var(--submit);
+}
+
+section {
+    max-width: 1200px;
+    padding: 0 3vw 0 3vw;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 800px;
+}
+
+form {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    padding: 15px 2vw;
+    border: solid 1px lightgrey;
+    background-color: var(--offwhite);
+    margin: 0 auto 2rem auto;
+}
+
+.time-select {
+    flex: 1 0 30%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.time-field {
+    padding: 5px;
+}
+
+.submit,
+.clear-events {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: var(--submit);
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+tr {
+    display: flex;
+    flex-flow: nowrap row;
+    min-height: 4rem;
+    margin: 3px 0;
+}
+
+th {
+    flex: 0 1 20%;
+    max-width: 150px;
+    padding-top: 5px;
+    border-top: dashed 1px grey;
+}
+
+td.event {
+    flex: 1 1 60%;
+    border: solid 1px var(--tableBorder);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--offwhite);
+}
+
+td.save-cell {
+    flex: 0 1 20%;
+    text-align: center;
+    max-width: 100px;
+    padding: 8px;
+}
+
+.past {
+    background-color:var(--past) !important;;
+}
+
+.present {
+    background-color:var(--present) !important;;
+}
+
+.future {
+    background-color:var(--future) !important;;
+}
+
+button.save {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: var(--offwhite);
+}
+
+button:hover,
+.submit:hover {
+    background-color: var(--button);
+    box-shadow: 0 0 5px 5px rgba(70, 125, 245, 0.4);
+    cursor: pointer;
+    color: white;
+}
+
+button:focus,
+.submit:focus {
+    box-shadow: 0 0 5px 5px rgba(70, 125, 245, 0.4);
+}
+
+.clear-div {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+footer {
+    height: 3rem;
+    background-color: var(--offwhite);
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 3rem;
+    border-top: solid 1px lightgrey;
+}
