@@ -26,6 +26,7 @@ h2 {
     font-weight: 300;
 }
 
+/* to display buttons either side of date  */
 .date-div {
     display: flex;
     flex-flow: row;
@@ -34,6 +35,7 @@ h2 {
     margin-top: 1.5rem;
 }
 
+/* change date button styles */
 .change-date {
     font-size: 150%;
     padding: 2px 5px;
@@ -55,6 +57,7 @@ p {
     max-width: 800px;
 }
 
+/* styling for form to change work day start and end times */
 form {
     display: flex;
     flex-flow: wrap row;
@@ -85,6 +88,7 @@ form {
     background-color: var(--submit);
 }
 
+/* table styling */
 table {
     width: 100%;
     margin: 0 auto;
@@ -97,6 +101,7 @@ tr {
     margin: 3px 0;
 }
 
+/* header cells for the time column  */
 th {
     flex: 0 1 20%;
     max-width: 150px;
@@ -104,6 +109,7 @@ th {
     border-top: dashed 1px grey;
 }
 
+/* main table events */
 td.event {
     flex: 1 1 60%;
     border: solid 1px var(--tableBorder);
@@ -112,6 +118,7 @@ td.event {
     background-color: var(--offwhite);
 }
 
+/* save button container cell */
 td.save-cell {
     flex: 0 1 20%;
     text-align: center;
@@ -119,6 +126,7 @@ td.save-cell {
     padding: 8px;
 }
 
+/* coloration for times relative to current time (hour) */
 .past {
     background-color:var(--past) !important;;
 }
@@ -131,6 +139,7 @@ td.save-cell {
     background-color:var(--future) !important;;
 }
 
+/* save button styles */
 button.save {
     height: 50px;
     width: 50px;
@@ -139,6 +148,7 @@ button.save {
     background-color: var(--offwhite);
 }
 
+/* hover and focus styles for buttons */
 button:hover,
 .submit:hover {
     background-color: var(--button);
