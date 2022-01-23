@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Day Organizer</title>
+</head>
+<body>
+    <header>
+        <h1>Work Day Scheduler</h1>
+        <h2>A simple app to plan your work day</h2>
+        <div class="date-div"><button id="prevDay" class="change-date"><</button><h2 id="today">Today's Date</h2><button id="nextDay" class="change-date">></button></div>
+    </header>
+    <main>
+        <section>
+            <p>
+                Add a new event to the planner by cicking on and typing into any of the cells. Be sure to click Save in order to record your event. You can adjust the start and end time of your work day below.
+            </p>
+            <form>
+                <div class="time-select">
+                    <label for="startTime">Work Day Begins: </label>
+                    <select name="startTime" id="startTime" class="time-field">
+                        <option value="6">6 AM</option>
+                        <option value="7">7 AM</option>
+                        <option value="8" selected>8 AM</option>
+                        <option value="9">9 AM</option>
+                        <option value="10">10 AM</option>
+                        <option value="11">11 AM</option>
+                        <option value="12">12 PM</option>
+                        <option value="13">1 PM</option>
+                        <option value="14">2 PM</option>
+                        <option value="15">3 PM</option>
+                        <option value="16">4 PM</option>
+                        <option value="17">5 PM</option>
+                        <option value="18">6 PM</option>
+                        <option value="19">7 PM</option>
+                        <option value="20">8 PM</option>
+                    </select>
+                </div>
+                <div class="time-select">
+                    <label for="endTime">Work Day Ends: </label>
+                    <select name="endTime" id="endTime" class="time-field">
+                        <option value="6">6 AM</option>
+                        <option value="7">7 AM</option>
+                        <option value="8">8 AM</option>
+                        <option value="9">9 AM</option>
+                        <option value="10">10 AM</option>
+                        <option value="11">11 AM</option>
+                        <option value="12">12 PM</option>
+                        <option value="13">1 PM</option>
+                        <option value="14">2 PM</option>
+                        <option value="15">3 PM</option>
+                        <option value="16" selected>4 PM</option>
+                        <option value="17">5 PM</option>
+                        <option value="18">6 PM</option>
+                        <option value="19">7 PM</option>
+                        <option value="20">8 PM</option>
+                    </select>
+                </div>
+                <div class="time-select">
+                    <input type="submit" value="Adjust Times" class="submit">
+                </div>
+                </form>
+            <table>
+                <tbody>
+                    <tr id="5">
+                        <th>5am</th>
+                        <td class="event" id="planner-event-5oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="6">
+                        <th>6am</th>
+                        <td class="event" id="planner-event-6oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="7">
+                        <th>7am</th>
+                        <td class="event" id="planner-event-7oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="8">
+                        <th>8am</th>
+                        <td class="event" id="planner-event-8oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="9">
+                        <th>9am</th>
+                        <td class="event" id="planner-event-9oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="10">
+                        <th>10am</th>
+                        <td class="event" id="planner-event-10oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="11">
+                        <th>11am</th>
+                        <td class="event" id="planner-event-11oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="12">
+                        <th>12pm</th>
+                        <td class="event" id="planner-event-12oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="13">
+                        <th>1pm</th>
+                        <td class="event" id="planner-event-13oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="14">
+                        <th>2pm</th>
+                        <td class="event" id="planner-event-14oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="15">
+                        <th>3pm</th>
+                        <td class="event" id="planner-event-15oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="16">
+                        <th>4pm</th>
+                        <td class="event" id="planner-event-16oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="17">
+                        <th>5pm</th>
+                        <td class="event" id="planner-event-17oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="18">
+                        <th>6pm</th>
+                        <td class="event" id="planner-event-18oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="19">
+                        <th>7pm</th>
+                        <td class="event" id="planner-event-19oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                    <tr id="20">
+                        <th>8pm</th>
+                        <td class="event" id="planner-event-20oc" contenteditable="true"></td>
+                        <td class="save-cell"><button class='save'><img src="./images/save-grey-nobg.png" alt="save icon" width="32px"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="clear-div">
+                <button id="clear-events" class="clear-events">Clear All Events</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Tidy Lines LLC
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
