@@ -20,8 +20,9 @@
     <main>
         <section>
             <p>
-                Add a new event to the planner by cicking on and typing into any of the cells. Be sure to click Save in order to record your event. You can adjust the start and end time of your work day below.
+                Add a new event to the planner by cicking on and typing into any of the cells. Be sure to click Save in order to record your event. The day runs from 5am to 9pm, with a default work day of 8am to 4pm, but you can adjust the start and end time of your work day below.
             </p>
+            <!-- Drop down options for work day start and end -->
             <form>
                 <div class="time-select">
                     <label for="startTime">Work Day Begins: </label>
@@ -63,10 +64,12 @@
                         <option value="20">8 PM</option>
                     </select>
                 </div>
+                <!-- Adjust times button -->
                 <div class="time-select">
                     <input type="submit" value="Adjust Times" class="submit">
                 </div>
                 </form>
+            <!-- day planner table -->
             <table>
                 <tbody>
                     <tr id="5">
@@ -151,6 +154,7 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- button to clear events -->
             <div class="clear-div">
                 <button id="clear-events" class="clear-events">Clear All Events</button>
             </div>
