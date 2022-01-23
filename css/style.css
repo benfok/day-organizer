@@ -63,7 +63,7 @@ form {
     flex-flow: wrap row;
     justify-content: space-between;
     align-items: center;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 15px 2vw;
     border: solid 1px lightgrey;
     background-color: var(--offwhite);
@@ -78,6 +78,7 @@ form {
 
 .time-field {
     padding: 5px;
+    margin-top: 10px;
 }
 
 .submit,
@@ -86,6 +87,7 @@ form {
     border-radius: 5px;
     border: solid 1px black;
     background-color: var(--submit);
+    margin-top: 10px;
 }
 
 /* table styling */
