@@ -2,16 +2,25 @@
 let dayModifier = 0;
 let shortDate = moment().add(dayModifier, 'days').format('MMDDYY');
 
-// let currentHour = moment().hour();
-let currentHour = 11;
+let currentHour = moment().hour();
+// let currentHour = 11; used for testing functionality
 let workDayStart = 8;
 let workDayEnd = 16;
 
+// functions to set the date (today by default) and then adjust the event cell <td> ids based on the date chosen. These ids ensure unique identifers per day for local storage of events. This allows the user to change the date but to retain date and time specific events
 function setDate (){
     document.getElementById('today').textContent = moment().add(dayModifier, 'days').format('dddd, MMMM Do YYYY');
     setIds();
 };
 
+function setIds() {
+    let $dateIds = $('.event');
+    $dateIds.each(function(){
+        this.id= moment().add(dayModifier, 'days').format('MMDDYY') + this.parentNode.id;
+    })
+};
+
+// called when moving between dates; clearing the planner prior to event population by date
 function clearEvents(){
     let $events = $('.event');
     $events.each(function(){
@@ -19,6 +28,7 @@ function clearEvents(){
     })
 };
 
+// functions called and event listeners for incrementing or decrementing the date. Adjusts the dateModifier variable (0 = today) 
 function incDay (){
     dayModifier++;
     setDate(); 
@@ -47,15 +57,9 @@ document.getElementById('prevDay').addEventListener('click', function(event){
     console.log(dayModifier);
 });
 
-function setIds() {
-    let $dateIds = $('.event');
-    $dateIds.each(function(){
-        this.id= moment().add(dayModifier, 'days').format('MMDDYY') + this.parentNode.id;
-    })
-};
 
 
-// get from localStorage
+// get events from localStorage and populate the planner. Runs on page load and when the date is changed
 function getEvents(eventId) {
     if (localStorage.getItem(eventId)) {
         let eventText = localStorage.getItem(eventId);
@@ -70,6 +74,7 @@ function eventLoop() {
     };
 };
 
+// function to set the event cell background color based on the date and time relation to the current time, and considering the user preference for work day hours
 function setBackground(hour) {
     for (i = 5; i < 21; i++) {
         let tableRow = document.getElementById(i);
@@ -102,7 +107,7 @@ function setBackground(hour) {
     
 
 
-// setting save button as a jQuery variable
+// setting save button as a jQuery variable in order to run save function across all buttons. Alert prevents a blank cell from being saved.
 let $saveCell = $('.save');
 
 $saveCell.on('click', function(event) {
@@ -115,6 +120,7 @@ $saveCell.on('click', function(event) {
     localStorage.setItem(event.originalEvent.path[3].children[1].id, event.originalEvent.path[3].children[1].textContent);
 });
 
+// functions that run on window load to setup the planner
 window.addEventListener('load', function(){
     setDate();
     setIds();
@@ -123,7 +129,7 @@ window.addEventListener('load', function(){
 });
 
 
-// function to change the work day start and end time
+// function to change the work day start and end time. Work day must be at least 4 hours long. This ensures valid entries are selected and applied
 document.querySelector('.submit').addEventListener('click', function(event){
     event.preventDefault();
     let startTime = Number(document.querySelector('#startTime').value);
@@ -139,7 +145,7 @@ document.querySelector('.submit').addEventListener('click', function(event){
         }
     });
 
-
+// function to clear all events from the calendar by clearing local storage
 document.querySelector('#clear-events').addEventListener('click', function(event){
     event.preventDefault();
     clearEvents();
