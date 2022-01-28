@@ -1,5 +1,5 @@
 :root {
-    --past: green;
+    --past: rgb(248, 128, 128);
     --present: yellow;
     --future: lightgreen;
     --tableBorder: black;  
