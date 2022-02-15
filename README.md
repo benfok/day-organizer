@@ -14,6 +14,14 @@ The deployed website can be found [here](https://benfok.github.io/day-organizer/
 
 The repository in GitHub is [here](https://github.com/benfok/day-organizer)
 
+## Languages, Skills and Credits
+- HTML
+- CSS
+- JavaScript
+- JQuery
+- Moment.js for time and date
+- Google Fonts
+
 ## Screenshot
 Here is a screenshot of my finished page. Some key details and learnings are below.
 
