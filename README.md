@@ -39,6 +39,8 @@ Here is a screenshot of my finished page. Some key details and learnings are bel
 
 ## Future Enhancements
 Ideas for how to enhance the application:
+- Update with ES6 JS syntax
+- Consider rewriting JS to be more object oriented and to auto generate the repetitive HTML
 - Automatically save after clicking/tabbing out of an event cell. A save button per row is not necessary.
 - Handle weekends or non-work days
 - Color coding defined by the user
